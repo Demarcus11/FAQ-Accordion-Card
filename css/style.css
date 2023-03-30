@@ -120,11 +120,12 @@ body {
 .box {
   position: absolute;
   left: 0;
-  top: 62%;
+  top: 40%;
   z-index: 1;
   transform: translateX(-50%) translateY(-50%);
   width: 200px;
   height: 200px;
+  animation: float 3s infinite ease-in-out;
 }
 
 @media (max-width: 750px) {
@@ -209,4 +210,17 @@ body {
 
 .question-answer:hover .show {
   color: var(--clr-primary-800);
+}
+
+@keyframes float {
+  /* Adjust -3% for height of float */
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -3%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
 }
